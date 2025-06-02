@@ -2,8 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Slideshow simples (automático)
   const imagens = [
-    "img\Enchente.jpg",
-    "img\Tecnologia.png",
+    "img/Enchente.jpg",
+    "img/Tecnologia.png",
     "img/Uso.jpg"
   ];
   let index = 0;
