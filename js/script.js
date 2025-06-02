@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Slideshow simples (automático)
   const imagens = [
     "img/Enchente.jpg",
-    "img/Tecnologia.png",
+    "img/Tecnologia1.png",
     "img/Uso.jpg"
   ];
   let index = 0;
@@ -66,5 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.backgroundColor = cores[btn.dataset.tema];
     });
   });
+
+  // Menu hambúrguer para mobile
+  const nav = document.querySelector("nav ul");
+  const menuToggle = document.createElement("button");
+  menuToggle.textContent = "☰";
+  menuToggle.className = "menu-toggle";
+  document.querySelector(".logo-nav").prepend(menuToggle);
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("ativo");
+  });
+
 
 
