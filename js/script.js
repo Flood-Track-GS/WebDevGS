@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cores = {
     claro: "#f4f4f4",
     escuro: "#1a1a1a",
-    azul: "#e0f7fa"
+    azul: "#1e90ff"
   };
   document.querySelectorAll(".tema-btn").forEach(btn => {
     btn.addEventListener("click", () => {
