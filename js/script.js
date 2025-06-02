@@ -53,9 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.getElementById("resultado-quiz").textContent = `Você acertou ${acertos} de 10 perguntas.`;
   });
-  });
 
-   // Temas
+  // Temas
   const cores = {
     claro: "#f4f4f4",
     escuro: "#1a1a1a",
@@ -76,6 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle.addEventListener("click", () => {
     nav.classList.toggle("ativo");
   });
-
-
-
+});
