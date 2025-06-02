@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Slideshow simples (automático)
   const imagens = [
-    "img/Enchente.jpg",
-    "img/Tecnologia1.png",
-    "img/Uso.jpg"
+    "img/SlideShow1.jpg",
+    "img/SlideShow2.jpg",
+    "img/SlideShow3.jpg"
   ];
   let index = 0;
   const slide = document.createElement("img");
