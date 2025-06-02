@@ -55,3 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   });
 
+   // Temas
+  const cores = {
+    claro: "#f4f4f4",
+    escuro: "#1a1a1a",
+    azul: "#e0f7fa"
+  };
+  document.querySelectorAll(".tema-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.body.style.backgroundColor = cores[btn.dataset.tema];
+    });
+  });
+
+
