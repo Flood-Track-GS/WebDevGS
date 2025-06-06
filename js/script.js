@@ -1,6 +1,5 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Slideshow simples (automático)
+  // Slideshow
   const imagens = [
     "img/SlideShow1.jpg",
     "img/SlideShow2.jpg",
@@ -20,41 +19,37 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(trocarSlide, 3000);
 
   // Quiz interativo
-  const perguntas = [
-    { q: "O que causa enchentes urbanas?", a: "chuvas intensas" },
-    { q: "Qual tecnologia ajuda a prever enchentes?", a: "inteligência artificial" },
-    { q: "Qual órgão brasileiro emite alertas?", a: "cemaden" },
-    { q: "Enchentes causam risco à saúde?", a: "sim" },
-    { q: "O que pode reduzir o impacto das enchentes?", a: "planejamento urbano" },
-    { q: "O que é sensoriamento remoto?", a: "monitoramento por satélite" },
-    { q: "O que é big data?", a: "grande volume de dados" },
-    { q: "Qual aplicativo envia alertas?", a: "alertagov" },
-    { q: "Qual cidade sofreu com enchente em 2024?", a: "canoas" },
-    { q: "Como ajudar em uma enchente?", a: "seguir alertas oficiais" }
-  ];
+  const quizForm = document.getElementById("quiz-form");
+  const resultado = document.getElementById("resultado-quiz");
 
-  const quizSecao = document.getElementById("quiz-container");
-  perguntas.forEach((p, i) => {
-    const bloco = document.createElement("div");
-    bloco.innerHTML = `
-      <label>${i + 1}. ${p.q}<br>
-        <input type="text" data-index="${i}" placeholder="Resposta">
-      </label><br><br>
-    `;
-    quizSecao.appendChild(bloco);
-  });
+  const respostasCorretas = {
+    q1: "a",
+    q2: "b",
+    q3: "a",
+    q4: "c",
+    q5: "b",
+    q6: "b",
+    q7: "a",
+    q8: "a",
+    q9: "a",
+    q10: "a"
+  };
 
-  document.getElementById("enviar-quiz").addEventListener("click", () => {
+  quizForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
     let acertos = 0;
-    document.querySelectorAll("#quiz-container input").forEach((input, i) => {
-      if (input.value.trim().toLowerCase() === perguntas[i].a.toLowerCase()) {
+    for (let i = 1; i <= 10; i++) {
+      const resposta = quizForm.elements["q" + i].value;
+      if (resposta === respostasCorretas["q" + i]) {
         acertos++;
       }
-    });
-    document.getElementById("resultado-quiz").textContent = `Você acertou ${acertos} de 10 perguntas.`;
+    }
+
+    resultado.textContent = `Você acertou ${acertos} de 10 perguntas.`;
   });
 
-  // Temas
+  // Tema claro/escuro/azul
   const cores = {
     claro: "#f4f4f4",
     escuro: "#1a1a1a",
@@ -66,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Menu hambúrguer para mobile
+  // Menu hambúrguer
   const nav = document.querySelector("nav ul");
   const menuToggle = document.createElement("button");
   menuToggle.textContent = "☰";
