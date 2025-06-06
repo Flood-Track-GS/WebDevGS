@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flood Track Solutions</title>
-   <script src="js/script.js"></script>
   <link rel="shortcut icon" href="./img/Logo.jpeg" type="logo">
   <link rel="stylesheet" href="./css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -80,14 +79,90 @@
 
     <section id="quiz">
   <h2>Quiz sobre as Enchentes</h2>
-  <div id="quiz-container"></div>
-  <button id="enviar-quiz">Enviar Respostas</button>
+  <form id="quiz-form">
+    <div class="pergunta">
+      <p>1. O que pode causar enchentes urbanas?</p>
+      <label><input type="radio" name="q1" value="a" required> Chuvas intensas e má drenagem</label><br>
+      <label><input type="radio" name="q1" value="b"> Ondas de calor</label><br>
+      <label><input type="radio" name="q1" value="c"> Secas prolongadas</label>
+    </div>
+
+    
+    <div class="pergunta">
+      <p>2. Qual órgão monitora desastres naturais no Brasil?</p>
+      <label><input type="radio" name="q2" value="a" required> IBGE</label><br>
+      <label><input type="radio" name="q2" value="b"> CEMADEN</label><br>
+      <label><input type="radio" name="q2" value="c"> INMETRO</label>
+    </div>
+
+    <div class="pergunta">
+      <p>3. Qual tecnologia ajuda a prever enchentes?</p>
+      <label><input type="radio" name="q3" value="a" required> Inteligência Artificial</label><br>
+      <label><input type="radio" name="q3" value="b"> Impressoras 3D</label><br>
+      <label><input type="radio" name="q3" value="c"> Realidade Virtual</label>
+    </div>
+
+    <div class="pergunta">
+      <p>4. Qual dessas ações ajuda a reduzir enchentes?</p>
+      <label><input type="radio" name="q4" value="a" required> Cobrir bueiros</label><br>
+      <label><input type="radio" name="q4" value="b"> Jogar lixo na rua</label><br>
+      <label><input type="radio" name="q4" value="c"> Manter o sistema de drenagem limpo</label>
+    </div>
+
+    <div class="pergunta">
+      <p>5. Qual é um sinal de risco de enchente?</p>
+      <label><input type="radio" name="q5" value="a" required> Céu limpo</label><br>
+      <label><input type="radio" name="q5" value="b"> Nível do rio subindo rapidamente</label><br>
+      <label><input type="radio" name="q5" value="c"> Vento fraco</label>
+    </div>
+
+    <div class="pergunta">
+      <p>6. O que fazer em caso de alagamento?</p>
+      <label><input type="radio" name="q6" value="a" required> Entrar na água</label><br>
+      <label><input type="radio" name="q6" value="b"> Buscar áreas elevadas</label><br>
+      <label><input type="radio" name="q6" value="c"> Dirigir em ruas alagadas</label>
+    </div>
+
+    <div class="pergunta">
+      <p>7. Como satélites ajudam no combate às enchentes?</p>
+      <label><input type="radio" name="q7" value="a" required> Monitoram áreas de risco</label><br>
+      <label><input type="radio" name="q7" value="b"> Produzem energia solar</label><br>
+      <label><input type="radio" name="q7" value="c"> Fornecem internet</label>
+    </div>
+
+    <div class="pergunta">
+      <p>8. Qual aplicativo envia alertas sobre enchentes?</p>
+      <label><input type="radio" name="q8" value="a" required> AlertaGov</label><br>
+      <label><input type="radio" name="q8" value="b"> TikTok</label><br>
+      <label><input type="radio" name="q8" value="c"> Instagram</label>
+    </div>
+
+    <div class="pergunta">
+      <p>9. Qual região brasileira sofre muito com enchentes?</p>
+      <label><input type="radio" name="q9" value="a" required> Região Metropolitana de São Paulo</label><br>
+      <label><input type="radio" name="q9" value="b"> Sertão do Nordeste</label><br>
+      <label><input type="radio" name="q9" value="c"> Pantanal</label>
+    </div>
+
+    <div class="pergunta">
+      <p>10. O que é sensoriamento remoto?</p>
+      <label><input type="radio" name="q10" value="a" required> Envio de dados por satélite</label><br>
+      <label><input type="radio" name="q10" value="b"> Observação direta com drones</label><br>
+      <label><input type="radio" name="q10" value="c"> Monitoramento de sons da natureza</label>
+    </div>
+
+    <br>
+    <button type="submit">Enviar Respostas</button>
+  </form>
+
   <p id="resultado-quiz"></p>
 </section>
+
   </main>
 
   <footer>
     <p>© 2025 Flood Track Solutions. Todos os direitos reservados.</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
